@@ -1,0 +1,10 @@
+https://www.codewithjason.com/run-postgresql-database-docker-container/
+
+
+docker run \
+  --name dev-postgres \             # the arbitrary name of the container we're starting
+  -e POSTGRES_PASSWORD=mypassword \ # the arbitrary db superuser password, which must be set to something
+  7c5881164407                      # the image ID from our previous docker build step
+
+
+docker run --name dev-postgres -e POSTGRES_PASSWORD=mypassword 7c5881164407
